@@ -30,9 +30,9 @@ const seatRoutes = require("./routes/seatroutes"); // Import seatroutes
 
 mongoose.connect(process.env.MONGO_URI, {
 
-  useNewUrlParser: true,
+  useNewUrlParser: true,
 
-  useUnifiedTopology: true
+useUnifiedTopology: true
 
 })
 

@@ -4,6 +4,7 @@ import SeatMap from "../components/seatmap";
 
 function PublicView() {
   const [seats, setSeats] = useState([]);
+  const [freeSeats, setFreeSeats] = useState(0);
 
   const fetchSeats = async () => {
     try {
@@ -26,9 +27,16 @@ function PublicView() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    // Update the free seats count whenever the seats array changes
+    const count = seats.filter(seat => seat.status === 'free').length;
+    setFreeSeats(count);
+  }, [seats]);
+
   return (
     <div>
       <h2>Library Seat Availability</h2>
+      <p>Free Seats: {freeSeats}</p>
       <SeatMap seats={seats} />
     </div>
   );
