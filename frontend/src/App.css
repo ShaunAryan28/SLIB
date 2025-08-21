@@ -1,0 +1,133 @@
+.navbar {
+  background-color: #333;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: flex-start; /* Align items to the start */
+  align-items: center;
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-link {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 5px; /* Rounded links */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-link:hover {
+  background-color: #575757;
+  color: white;
+}
+
+.navbar-button {
+  background-color: #dc3545; /* Red for logout */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-button:hover {
+  background-color: #c82333;
+}
+
+.navbar-spacing {
+  margin-right: 15px; /* Add space between elements */
+}
+
+.helpdesk-input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.helpdesk-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.helpdesk-button:hover {
+  background-color: #0056b3;
+}
+
+.helpdesk-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.helpdesk-button-red {
+  background-color: #dc3545;
+}
+
+.helpdesk-button-red:hover {
+  background-color: #c82333;
+}
+
+.helpdesk-controls-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 10px; /* Space between items */
+  margin-top: 20px; /* Space above controls */
+  justify-content: center; /* Center controls on smaller screens */
+}
+
+.seatmap-container {
+  overflow-x: auto; /* Allow horizontal scrolling if seats overflow */
+  padding: 10px; /* Add some padding */
+  margin: 0 auto; /* Center the map */
+  max-width: 100%; /* Ensure it doesn't exceed parent width */
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
