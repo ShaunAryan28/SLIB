@@ -10,10 +10,17 @@ const Seat = require("./models/seat"); // Import Seat model
 
 
 
+
 const app = express();
 
 app.use(cors());
 
+
+app.use(cors({
+  origin: ["https://slib-frontend.onrender.com"], // frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 

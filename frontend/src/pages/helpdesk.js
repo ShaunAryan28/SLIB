@@ -30,7 +30,7 @@ function HelpDesk() {
   useEffect(() => {
     // Note: Global authentication check is now in App.js
     fetchSeats(); // Fetch seats on component mount
-    const interval = setInterval(fetchSeats, 5000); // Poll every 5 sec
+    const interval = setInterval(fetchSeats, 3000); // Poll every 3 sec
     return () => clearInterval(interval); // Cleanup on unmount
   }, []); // Empty dependency array means this runs once on mount
 
